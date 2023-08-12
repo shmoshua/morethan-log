@@ -45,14 +45,6 @@ const CONFIG = {
       siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
     },
   },
-  utterances: {
-    enable: false,
-    config: {
-      repo: process.env.NEXT_PUBLIC_UTTERANCES_REPO,
-      "issue-term": "og:title",
-      label: "💬 Utterances",
-    },
-  },
   cusdis: {
     enable: false,
     config: {
