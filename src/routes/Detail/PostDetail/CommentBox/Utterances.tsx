@@ -31,7 +31,10 @@ const Utterances: React.FC<Props> = ({ issueTerm }) => {
     script.setAttribute("theme", theme)
     const config: { [key: string]: string } = CONFIG.utterances.config
     Object.keys(config).forEach((key) => {
-      script.setAttribute(key, config[key])
+      const value = config[key];
+      if (typeof value === "string") {
+        script.setAttribute(key, value)
+      }
     })
     anchor.appendChild(script)
     return () => {
