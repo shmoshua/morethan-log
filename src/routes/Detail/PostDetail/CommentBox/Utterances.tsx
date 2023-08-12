@@ -11,6 +11,10 @@ type Props = {
 }
 
 const Utterances: React.FC<Props> = ({ issueTerm }) => {
+  if (!enable) {
+    return null; // Render nothing if Utterances is disabled
+  }
+  
   const [scheme] = useScheme()
   const router = useRouter()
 
